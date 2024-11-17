@@ -38,8 +38,8 @@ async function main() {
     // check mapping fundersToAmount
     const firstAccountBalanceInFundMe = await fundMe.fundersToAmount(firstAccount.address)
     const secondAccountBalanceInFundMe = await fundMe.fundersToAmount(secondAccount.address)
-    console.log(`Balance of first account ${firstAccount} is ${firstAccountBalanceInFundMe}`)
-    console.log(`Balance of first account ${secondAccount} is ${secondAccountBalanceInFundMe}`)
+    console.log(`Balance of first account ${firstAccount.address} is ${firstAccountBalanceInFundMe}`)
+    console.log(`Balance of first account ${secondAccount.address} is ${secondAccountBalanceInFundMe}`)
 }
 
 async function verifyFundMe(fundMeAddr, args) {

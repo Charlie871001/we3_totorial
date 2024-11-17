@@ -35,7 +35,7 @@ contract FundMe {
     }
 
     function fund() external payable {
-        require(convertEthToUsd(msg.value) >= MINIMUM_VALUE, "Send more ETH");
+        // require(convertEthToUsd(msg.value) >= MINIMUM_VALUE, "Send more ETH");
         require(block.timestamp < deploymentTimestamp + lockTime, "window is closed");
         fundersToAmount[msg.sender] = msg.value;
     }
