@@ -4,7 +4,7 @@
 
 // module.exports.default=deployFunction
 
-module.exports.default = async ({ getNamedAccounts, deployments }) => {
+module.exports = async ({ getNamedAccounts, deployments }) => {
     const { firstAccount } = await getNamedAccounts()
     const { deploy } = deployments
 
@@ -14,3 +14,5 @@ module.exports.default = async ({ getNamedAccounts, deployments }) => {
         log: true
     })
 }
+
+module.exports.tags = ["all", "fundme"]
